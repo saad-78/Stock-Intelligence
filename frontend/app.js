@@ -1,4 +1,5 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://stock-intelligence.onrender.com";
+
 
 const companyListEl = document.getElementById("company-list");
 const compareSelect1 = document.getElementById("compare-symbol-1");
