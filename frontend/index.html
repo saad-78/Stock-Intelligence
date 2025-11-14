@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Data Intelligence Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Companies</h2>
+      <ul id="company-list"></ul>
+    </aside>
+    <main class="main">
+      <header class="controls">
+        <div class="filter-group">
+          <label>Range:</label>
+          <button data-range="30" class="range-btn active">Last 30 days</button>
+          <button data-range="90" class="range-btn">Last 90 days</button>
+          <button data-range="180" class="range-btn">Last 180 days</button>
+        </div>
+        <div class="compare-group">
+          <label>Compare:</label>
+          <select id="compare-symbol-1"></select>
+          <select id="compare-symbol-2"></select>
+          <button id="compare-button">Compare</button>
+        </div>
+      </header>
+
+      <section class="charts-section">
+        <div class="chart-container">
+          <h3 id="chart-title">Price and Prediction</h3>
+          <canvas id="price-chart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Comparison (30d Return)</h3>
+          <canvas id="compare-chart"></canvas>
+        </div>
+      </section>
+
+      <section class="insights-section">
+        <div class="insight-card">
+          <h4>Selected Summary</h4>
+          <div id="summary-content"></div>
+        </div>
+        <div class="insight-card">
+          <h4>Top Gainers (30d)</h4>
+          <ul id="top-gainers"></ul>
+        </div>
+        <div class="insight-card">
+          <h4>Top Losers (30d)</h4>
+          <ul id="top-losers"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

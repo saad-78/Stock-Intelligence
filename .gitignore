@@ -1,0 +1,46 @@
+# ---- Python / FastAPI backend ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pytest_cache/
+*.coverage
+.pytest_cache/
+.cache/
+
+# Virtual environments
+venv/
+.env/
+.env.*
+
+
+# SQLite database (generated at runtime)
+backend/stock_data.db
+
+# Local config / secrets (keep an example file tracked instead)
+backend/.env
+
+# Build / packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# ---- Frontend ----
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# If you ever add a build step (e.g., bundler)
+frontend/dist/
+frontend/build/
